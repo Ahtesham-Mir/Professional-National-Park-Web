@@ -2,7 +2,7 @@ function toggleSearch() {
   document.getElementById('searchInput').classList.toggle('open');
 }
 
-// Contact Page Js
+// handle the contact form
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -27,7 +27,7 @@ if (form) {
   });
 }
 
-// Privacy-Policy Page Js
+// set the effective date on privacy page
 (function setEffectiveDate(){
   const el = document.getElementById('effectiveDate');
   if(!el) return;
@@ -37,13 +37,13 @@ if (form) {
   el.textContent = `EFFECTIVE: ${months[d.getMonth()]} ${day}, ${d.getFullYear()}`;
 })();
 
-// Auto year in footer
+// update the year in footer
 (function setYear(){
   const y = document.getElementById('year');
   if(y) y.textContent = new Date().getFullYear();
 })();
 
-// Back to Top — supports backToTopBtn, backToTop, and backTop ids
+// setup back to top button (works with multiple id names)
 (function initAllBackToTopButtons() {
   function wireBackToTop(btn) {
     if (!btn || btn.dataset.backToTopWired === 'true') return;
@@ -73,8 +73,7 @@ if (form) {
   });
 })();
 
-// Search — hidden by default. Click SEARCH button: input slides in.
-// Type + Enter (or click again when open) to run the search.
+// search box slides in when you click the button, enter to search
 (function () {
   const wrap = document.querySelector('.search-wrap');
   const input = document.getElementById('searchInput');
@@ -159,14 +158,14 @@ if (form) {
   });
 })();
 
-// Prevent jump for nav anchor placeholders
+// don't jump when clicking navbar anchors
 document.querySelectorAll('.navbar a').forEach(a => {
   a.addEventListener('click', e => {
     if (a.getAttribute('href') === '#') e.preventDefault();
   });
 });
 
-// Mobile Menu Toggle
+// toggle the mobile menu
 (function () {
   const hamburger = document.querySelector('.hamburger-menu');
   const mobileMenu = document.querySelector('.mobile-menu');
@@ -244,13 +243,13 @@ document.querySelectorAll('.navbar a').forEach(a => {
   });
 })();
 
-// Mobile Search Function
+// search for stuff on the page
 function performMobileSearch() {
   const searchInput = document.getElementById('mobileSearchInput');
   if (!searchInput) return;
   const searchTerm = searchInput.value.toLowerCase().trim();
 
-  // Search redirects
+  // redirect based on what they search for
   if (searchTerm === 'k2 base camp' || searchTerm === 'k2') {
     window.location.href = 'k2-base-camp.html';
   } else if (searchTerm === 'hunza valley' || searchTerm === 'hunza') {
@@ -267,7 +266,7 @@ function performMobileSearch() {
   }
 }
 
-// Smooth scroll-in for sections (respects prefers-reduced-motion)
+// sections fade in as you scroll down the page
 function initSmoothReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 

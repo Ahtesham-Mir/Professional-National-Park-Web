@@ -488,7 +488,7 @@
       });
     });
 
-    // Search functionality
+    // handle the search
     function handleSearch(event) {
       if (event.key === 'Enter') {
         performSearch();
@@ -517,7 +517,7 @@
       }
     }
 
-    // Toggle search input
+    // toggle search box
     document.querySelector('.search-btn').addEventListener('click', function() {
       document.getElementById('searchInput').classList.toggle('open');
     });

@@ -1,6 +1,6 @@
 /**
- * Site-wide smooth polish — theme, fonts, and layout unchanged.
- * Load last (end of body) so it layers over page-specific inline styles.
+ * Small tweaks and smooth transitions - theme and layout stay the same.
+ * Loads at the end so it goes over other styles.
  */
 
 :root {
@@ -26,7 +26,7 @@
   }
 }
 
-/* ── Navbar & marquee ── */
+/* navbar and marquee transitions */
 .navbar {
   transition:
     background-color var(--t-med) var(--ease-smooth),
@@ -39,7 +39,7 @@
   transition: opacity var(--t-med) var(--ease-smooth);
 }
 
-/* ── Interactive elements (no font changes) ── */
+/* interactive elements get smooth transitions */
 a:not(.no-smooth) {
   transition:
     color var(--t-fast) var(--ease-smooth),
@@ -76,7 +76,7 @@ button:active,
   transform: translateY(1px);
 }
 
-/* ── Form fields ── */
+/* form fields smooth transitions */
 input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select {
@@ -93,7 +93,7 @@ select:focus {
   box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.18);
 }
 
-/* ── Cards & panels ── */
+/* card and panel hover effects */
 .dest-card,
 .wildlife-card,
 .camping-card,
@@ -105,7 +105,7 @@ select:focus {
     border-color var(--t-med) var(--ease-smooth);
 }
 
-/* ── Images (exclude logos & icons) ── */
+/* image scaling and filter changes */
 .dest-card img,
 .wildlife-card img,
 .camping-img img,
@@ -127,7 +127,7 @@ select:focus {
   transition: opacity var(--t-fast) var(--ease-smooth);
 }
 
-/* ── Dropdowns & mobile menu ── */
+/* dropdown and mobile menu animations */
 .dropdown,
 .mega-dropdown,
 .simple-dropdown,
@@ -148,7 +148,7 @@ select:focus {
     opacity var(--t-fast) var(--ease-smooth) !important;
 }
 
-/* ── Footer & back to top ── */
+/* footer links and back-to-top button */
 .footer-links a,
 .footer-contact-text a,
 .footer-bottom-links a,
@@ -169,7 +169,7 @@ select:focus {
     box-shadow var(--t-med) var(--ease-smooth) !important;
 }
 
-/* ── Scroll reveal (JS adds .reveal / .is-visible) ── */
+/* fade in animation when page loads */
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
@@ -199,7 +199,7 @@ select:focus {
   }
 }
 
-/* ── Subtle hover lift on primary CTAs ── */
+/* small lift on button hover */
 @media (prefers-reduced-motion: no-preference) {
   .btn-primary:hover,
   .camping-btn:hover,

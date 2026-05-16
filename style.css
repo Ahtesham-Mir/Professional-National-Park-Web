@@ -33,10 +33,10 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding-top: 130px;
-  /* marquee height (42px) + navbar height (88px) */
+  /* navbar + marquee pushed down */
 }
 
-/* ── NAVBAR ── */
+/* NAVBAR */
 .navbar {
   position: relative;
   top:0;
@@ -340,7 +340,7 @@ body {
   background: var(--burnt-light);
 }
 
-/* ── HERO ── */
+/* HERO */
 .hero-section {
   height: 100vh;
   position: relative;
@@ -535,7 +535,7 @@ body {
   }
 }
 
-/* ── SECTION SHARED ── */
+/* SECTION SHARED */
 .section-eyebrow {
   font-family: 'Rajdhani', sans-serif;
   font-size: 10px;
@@ -570,7 +570,7 @@ body {
   margin-left: 0;
 }
 
-/* ── EXPLORE SECTION (like East Luwu hero) ── */
+/* explore section like a hero */
 .explore-section {
   position: relative;
   height: 100vh;
@@ -721,7 +721,7 @@ body {
   cursor: pointer;
 }
 
-/* ── DESTINATIONS GRID ── */
+/* DESTINATIONS GRID */
 .destinations-section {
   padding: 100px 80px;
   background: var(--dark);
@@ -809,7 +809,7 @@ body {
   margin-top: 3px;
 }
 
-/* ── EXPERIENCE SECTION ── */
+/* EXPERIENCE SECTION */
 .experience-section {
   padding: 100px 80px;
   background: var(--mid);
@@ -924,7 +924,7 @@ body {
   background: var(--burnt-light);
 }
 
-/* ── WILDLIFE / VIDEO SECTION ── */
+/* WILDLIFE / VIDEO SECTION */
 .wildlife-section {
   padding: 100px 80px;
   background: var(--dark);
@@ -1102,7 +1102,7 @@ body {
   text-transform: uppercase;
 }
 
-/* ── FOOTER ── */
+/* FOOTER */
 .footer {
   position: relative;
   overflow: hidden;
@@ -1356,7 +1356,7 @@ a {
   text-decoration: none;
 }
 
-/* ============ HERO / HEADER ============ */
+/* HERO / HEADER */
 .contact-hero {
   padding: 110px 0 50px;
   text-align: center;
@@ -1442,7 +1442,7 @@ a {
   margin-bottom: 28px;
 }
 
-/* LEFT — info items */
+/* left side - contact info */
 .info-list {
   display: flex;
   flex-direction: column;
@@ -1500,7 +1500,7 @@ a {
   color: var(--accent);
 }
 
-/* RIGHT — form */
+/* right side - form */
 .field {
   margin-bottom: 18px;
 }
@@ -1714,9 +1714,9 @@ footer.site-footer {
 }
 
 
-/* Privacy-Policy Css */
+/* Privacy-Policy page styles */
 
-/* ===== Design Tokens ===== */
+/* Design color setup */
 :root {
   --bg: #1a0f0a;
   --bg-2: #140b07;
@@ -1757,7 +1757,7 @@ ul {
   list-style: none
 }
 
-/* ===== Header (compact + auto hide/show on scroll) ===== */
+/* Header that hides/shows on scroll */
 .site-header {
   position: fixed;
   top: 0;
@@ -1785,7 +1785,7 @@ ul {
   background: rgba(20, 11, 7, .96);
 }
 
-/* push content below the fixed header */
+/* push page content down for the fixed header */
 body {
   padding-top: var(--header-h);
 }
@@ -1803,7 +1803,7 @@ body {
   color: var(--accent-2)
 }
 
-/* center brand + logo */
+/* logo in the center of header */
 .brand-logo {
   position: absolute;
   left: 50%;
@@ -1848,7 +1848,7 @@ body {
   transform: translateY(-1px)
 }
 
-/* ===== Hero ===== */
+/* hero section at top of page */
 .hero {
   text-align: center;
   padding: 90px 24px 80px;
@@ -1887,7 +1887,7 @@ body {
   font-size: 12px;
 }
 
-/* ===== Policy ===== */
+/* policy content styles */
 .policy {
   max-width: 880px;
   margin: 60px auto 80px;
@@ -1916,7 +1916,7 @@ body {
   font-size: 16.5px;
 }
 
-/* ===== CTA ===== */
+/* call to action card */
 .cta-card {
   margin-top: 72px;
   border: 1px solid var(--rule);
@@ -1942,7 +1942,7 @@ body {
   display: inline-block
 }
 
-/* ===== Footer ===== */
+/* footer section at bottom */
 .site-footer {
   background: var(--bg-2);
   padding: 70px 48px 30px;
@@ -2028,7 +2028,7 @@ body {
   color: var(--muted);
 }
 
-/* ===== Responsive ===== */
+/* mobile responsive styles */
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -2081,11 +2081,10 @@ body {
   }
 }
 
-/* Marquee Css */
+/* Marquee bar at the top */
 
 .na-marquee {
   position: fixed;
-  /* 🔥 ye main fix hai */
   top: 0;
   left: 0;
   width: 100%;
@@ -2178,10 +2177,10 @@ body {
   }
 }
 
-/* BackOnTop */
+/* back to top button */
 
 
-/* ── BACK TO TOP BUTTON ── */
+/* BACK TO TOP BUTTON */
 .back-to-top {
   position: fixed !important;
   bottom: 32px;
@@ -2227,7 +2226,7 @@ body {
   }
 }
 
-/* ── MOBILE RESPONSIVE NAVBAR ── */
+/* MOBILE RESPONSIVE NAVBAR */
 @media (max-width: 1024px) {
   .navbar {
     padding: 0 20px;
@@ -2425,7 +2424,7 @@ body {
   }
 }
 
-/* ── MOBILE RESPONSIVE SECTIONS ── */
+/* MOBILE RESPONSIVE SECTIONS */
 @media (max-width: 1024px) {
   body {
     padding-top: 130px;

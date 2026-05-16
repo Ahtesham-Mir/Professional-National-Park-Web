@@ -1163,7 +1163,7 @@
   </button>
 
   <script>
-    // Search functionality
+    // handle the search
     function handleSearch(event) {
       if (event.key === 'Enter') {
         performSearch();
@@ -1199,7 +1199,7 @@
       }
     }
 
-    // Tab functionality
+    // handle tabs
     function showTab(tabName) {
       // Hide all tab contents
       const tabContents = document.querySelectorAll('.tab-content');
@@ -1220,7 +1220,7 @@
       event.target.classList.add('active');
     }
 
-    // Back to top button functionality
+    // back to top button
     const backToTopBtn = document.getElementById('backToTopBtn');
 
     window.addEventListener('scroll', () => {
