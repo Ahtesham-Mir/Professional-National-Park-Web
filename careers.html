@@ -1,502 +1,1217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers — National Park Pakistan</title>
   <meta name="description" content="Career opportunities and jobs at Pakistan National Park." />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{background:#0b1410;color:#f3ead4;font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden;}
-    .na-marquee{background:linear-gradient(90deg,#0d2a1d 0%,#143a28 50%,#0d2a1d 100%);border-bottom:1px solid rgba(201,162,76,0.35);overflow:hidden;padding:10px 0;}
-    .marquee{display:inline-block;white-space:nowrap;animation:marquee 28s linear infinite;font-family:'Playfair Display',serif;font-style:italic;color:#e8c878;letter-spacing:0.08em;font-size:15px;}
-    .marquee span{margin-right:60px;}
-    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-    :root{--burnt:#c0390b;--burnt-light:#e64a19;--gold:#c9a96e;--cream:#f5f0e8;--dark:#0d0c0a;--mid:#1a1714;--nav-h:88px;}
-    body{padding-top:88px;}
-    .navbar{position:fixed;top:0;left:0;right:0;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(10,9,8,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,110,0.15);z-index:9999;}
-    .nav-left{flex:1;display:flex;align-items:center;}
-    .nav-right{flex:1;display:flex;align-items:center;justify-content:flex-end;}
-    .navbar .logo-area{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;}
-    .main-logo,.center-logo{height:50px;width:auto;}
-    .nav-btn{background:none;border:none;color:rgba(245,240,232,0.75);font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:8px 0;transition:color 0.2s;white-space:nowrap;}
-    .nav-btn:hover,.nav-item:hover .nav-btn{color:var(--gold);}
-    .nav-links{display:flex;gap:30px;}
-    .nav-item{position:relative;}
-    .dropdown{position:absolute;top:100%;left:0;max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease, opacity 0.3s ease;pointer-events:none;z-index:9999;}
-    .nav-right .mega-dropdown{left:auto;right:0;width:760px;padding:0;}
-    .nav-item:hover .dropdown{max-height:700px;opacity:1;pointer-events:auto;}
-    .simple-dropdown{background:rgba(15,22,18,0.98);border:1px solid rgba(201,169,110,0.2);border-radius:4px;width:190px;}
-    .dropdown-content-simple a{display:block;color:rgba(245,240,232,0.7);padding:13px 22px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.2s,color 0.2s;}
-    .dropdown-content-simple a:hover{background:rgba(201,169,110,0.2);color:#fff;}
-    .mega-dropdown{position:absolute;top:100%;right:-100px;width:760px;max-width:85vw;min-height:340px;display:flex;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s ease;box-shadow:0 10px 30px rgba(0,0,0,0.3);border-radius:8px;background:rgba(15,22,18,0.98);border:1px solid rgba(201,169,110,0.2);z-index:9999;}
-    .nav-item:hover .mega-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;}
-    .mega-img-wrap{width:340px;flex-shrink:0;overflow:hidden;position:relative;}
-    .mega-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
-    .nav-item:hover .mega-img-wrap img{transform:scale(1.05);}
-    .mega-content{padding:42px;flex:1;display:flex;flex-direction:column;justify-content:center;}
-    .mega-label{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;color:var(--burnt-light);text-transform:uppercase;margin-bottom:12px;}
-    .mega-content h3{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);margin-bottom:16px;line-height:1.3;}
-    .mega-content p{font-size:17px;line-height:1.9;color:rgba(245,240,232,0.75);font-style:italic;}
-    .mega-cta{margin-top:24px;display:inline-block;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;color:var(--cream);text-decoration:none;border-bottom:1px solid var(--burnt-light);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;cursor:pointer;}
-    .mega-cta:hover{color:var(--gold);border-color:var(--gold);}
-    .search-wrap{display:flex;align-items:center;gap:8px;}
-    #searchInput{background:rgba(245,240,232,0.1);border:1px solid rgba(245,240,232,0.2);color:rgba(245,240,232,0.8);padding:8px 12px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:12px;width:200px;opacity:1;transition:all 0.3s ease;}
-    #searchInput:focus{border-color:var(--gold);outline:none;}
-    .search-btn{background:none;border:1px solid rgba(245,240,232,0.3);color:rgba(245,240,232,0.7);padding:8px 12px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all 0.2s;}
-    .search-btn:hover{border-color:var(--gold);color:var(--gold);}
-    .footer{position:relative;overflow:hidden;background:#0a0e0c;}
-    .footer-scene{width:100%;display:block;}
-    .footer-body{position:relative;background:#0a0e0c;padding:52px 80px 0;}
-    .footer-columns{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(245,240,232,0.08);}
-    .footer-brand-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);margin-bottom:4px;}
-    .footer-brand-tagline{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;color:rgba(245,240,232,0.4);text-transform:uppercase;margin-bottom:18px;}
-    .footer-brand-desc{font-size:14px;line-height:1.8;color:rgba(245,240,232,0.45);max-width:300px;}
-    .footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;}
-    .footer-contact-icon{width:28px;height:28px;border-radius:50%;background:rgba(201,169,110,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-    .footer-contact-icon svg{width:13px;height:13px;stroke:var(--gold);fill:none;}
-    .footer-contact-text{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:500;color:rgba(245,240,232,0.6);}
-    .footer-contact-text a{color:rgba(245,240,232,0.6);text-decoration:none;transition:color 0.2s;}
-    .footer-contact-text a:hover{color:var(--gold);}
-    .footer-col-title{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:var(--gold);margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(201,169,110,0.2);}
-    .footer-links{list-style:none;}
-    .footer-links li{margin-bottom:10px;}
-    .footer-links a{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:400;color:rgba(245,240,232,0.7);text-decoration:none;transition:color 0.2s,padding-left 0.2s;display:inline-block;}
-    .footer-links a:hover{color:var(--gold);padding-left:4px;}
-    .footer-socials{display:flex;gap:10px;margin-top:20px;}
-    .social-btn{width:36px;height:36px;border-radius:50%;background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;transition:all 0.2s;}
-    .social-btn:hover{background:var(--gold);color:var(--dark);border-color:var(--gold);transform:translateY(-2px);}
-    .social-btn svg{width:16px;height:16px;fill:var(--gold);}
-    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding:20px 0 28px;}
-    .footer-bottom-left{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;color:rgba(245,240,232,0.25);}
-    .footer-bottom-links{display:flex;gap:24px;}
-    .footer-bottom-links a{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;color:rgba(245,240,232,0.3);text-decoration:none;transition:color 0.2s;}
-    .footer-bottom-links a:hover{color:var(--gold);}
-    .footer-bottom-right{font-family:'Rajdhani',sans-serif;font-size:11px;color:rgba(245,240,232,0.2);}
-    @media(max-width:900px){.footer-columns{grid-template-columns:1fr 1fr;gap:36px;}.footer-body{padding:40px 40px 0;}}
-    @media(max-width:560px){.footer-columns{grid-template-columns:1fr;}.footer-body{padding:30px 20px 0;}.navbar{padding:0 20px;}}
-    .hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
-    .hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;animation:slowzoom 18s ease-in-out infinite alternate;}
-    @keyframes slowzoom{from{transform:scale(1);}to{transform:scale(1.06);}}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,9,8,0.55) 0%,rgba(10,9,8,0.25) 40%,rgba(10,9,8,0.65) 100%);}
-    .hero-content{position:relative;z-index:2;animation:fadeup 1.4s ease both;}
-    @keyframes fadeup{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-    .hero-eyebrow{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;opacity:0.9;}
-    .hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(52px,8vw,92px);font-weight:900;letter-spacing:6px;color:#fff;line-height:1;text-shadow:0 4px 40px rgba(0,0,0,0.5);}
-    .hero-content h1 span{color:var(--gold);}
-    .hero-subtitle{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:300;letter-spacing:10px;color:rgba(245,240,232,0.7);margin-top:16px;text-transform:uppercase;}
-    .hero-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:28px auto;}
-    .hero-divider span{width:60px;height:1px;background:rgba(201,169,110,0.5);display:block;}
-    .hero-divider i{width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg);display:block;}
-    .careers-section{padding:80px 24px;max-width:1200px;margin:0 auto;}
-    .careers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:40px;margin-top:60px;}
-    .career-card{background:rgba(255,255,255,0.02);border:1px solid rgba(201,169,110,0.15);border-radius:12px;overflow:hidden;transition:transform 0.3s ease,box-shadow 0.3s ease;}
-    .career-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.15);}
-    .career-header{height:120px;background:linear-gradient(135deg,var(--gold),var(--burnt-light));display:flex;align-items:center;justify-content:center;position:relative;}
-    .career-icon{font-size:48px;color:#fff;}
-    .career-info{padding:30px;}
-    .career-title{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);margin-bottom:15px;text-align:center;}
-    .career-desc{font-size:16px;line-height:1.7;color:rgba(245,240,232,0.85);margin-bottom:20px;text-align:center;}
-    .career-requirements{margin-bottom:20px;}
-    .requirement-item{display:flex;align-items:center;margin-bottom:10px;font-size:14px;color:rgba(245,240,232,0.8);}
-    .requirement-icon{width:20px;height:20px;margin-right:10px;color:var(--gold);}
-    .career-btn{display:inline-flex;align-items:center;justify-content-center;background:var(--gold);color:var(--bg);padding:12px 24px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all 0.3s ease;width:100%;}
-    .career-btn:hover{background:var(--burnt-light);transform:translateY(-2px);}
-    .back-to-top{position:fixed;bottom:30px;right:30px;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);background:var(--bg);color:var(--gold);cursor:pointer;font-size:22px;box-shadow:0 10px 30px rgba(0,0,0,0.5);z-index:99;display:none;transition:all 0.3s ease;}
-    .back-to-top.show{display:block;}
-    .back-to-top:hover{background:var(--gold);color:var(--bg);}
-    :root{--bg:#0a0a10;--bg-2:#0f0f17;--surface:#14141d;--surface-2:#1a1a25;--border:rgba(255,255,255,0.07);--border-strong:rgba(255,255,255,0.12);--text:#ececf1;--muted:#8e8e9b;--muted-2:#6e6e7c;--accent:#f3c14a;--accent-2:#ffd770;--accent-soft:rgba(243,193,74,0.12);--cream:#f3ead4;--gold:#c9a24c;--burnt:#8b6b47;--burnt-light:#a67c52;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b1410;
+      color: #f3ead4;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .na-marquee {
+      background: linear-gradient(90deg, #0d2a1d 0%, #143a28 50%, #0d2a1d 100%);
+      border-bottom: 1px solid rgba(201, 162, 76, 0.35);
+      overflow: hidden;
+      padding: 10px 0;
+    }
+
+    .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 28s linear infinite;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #e8c878;
+      letter-spacing: 0.08em;
+      font-size: 15px;
+    }
+
+    .marquee span {
+      margin-right: 60px;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    :root {
+      --burnt: #c0390b;
+      --burnt-light: #e64a19;
+      --gold: #c9a96e;
+      --cream: #f5f0e8;
+      --dark: #0d0c0a;
+      --mid: #1a1714;
+      --nav-h: 88px;
+    }
+
+    body {
+      padding-top: 88px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      background: rgba(10, 9, 8, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+      z-index: 9999;
+    }
+
+    .nav-left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .navbar .logo-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .main-logo,
+    .center-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: rgba(245, 240, 232, 0.75);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 8px 0;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover,
+    .nav-item:hover .nav-btn {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .nav-right .mega-dropdown {
+      left: auto;
+      right: 0;
+      width: 760px;
+      padding: 0;
+    }
+
+    .nav-item:hover .dropdown {
+      max-height: 700px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .simple-dropdown {
+      background: rgba(15, 22, 18, 0.98);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-radius: 4px;
+      width: 190px;
+    }
+
+    .dropdown-content-simple a {
+      display: block;
+      color: rgba(245, 240, 232, 0.7);
+      padding: 13px 22px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .dropdown-content-simple a:hover {
+      background: rgba(201, 169, 110, 0.2);
+      color: #fff;
+    }
+
+    .mega-dropdown {
+      position: absolute;
+      top: 100%;
+      right: -100px;
+      width: 760px;
+      max-width: 85vw;
+      min-height: 340px;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      background: rgba(15, 22, 18, 0.98);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      z-index: 9999;
+    }
+
+    .nav-item:hover .mega-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .mega-img-wrap {
+      width: 340px;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mega-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .nav-item:hover .mega-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .mega-content {
+      padding: 42px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mega-label {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--burnt-light);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .mega-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .mega-content p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: rgba(245, 240, 232, 0.75);
+      font-style: italic;
+    }
+
+    .mega-cta {
+      margin-top: 24px;
+      display: inline-block;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--cream);
+      text-decoration: none;
+      border-bottom: 1px solid var(--burnt-light);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .mega-cta:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #searchInput {
+      background: rgba(245, 240, 232, 0.1);
+      border: 1px solid rgba(245, 240, 232, 0.2);
+      color: rgba(245, 240, 232, 0.8);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      width: 200px;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    #searchInput:focus {
+      border-color: var(--gold);
+      outline: none;
+    }
+
+    .search-btn {
+      background: none;
+      border: 1px solid rgba(245, 240, 232, 0.3);
+      color: rgba(245, 240, 232, 0.7);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .search-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .footer {
+      position: relative;
+      overflow: hidden;
+      background: #0a0e0c;
+    }
+
+    .footer-scene {
+      width: 100%;
+      display: block;
+    }
+
+    .footer-body {
+      position: relative;
+      background: #0a0e0c;
+      padding: 52px 80px 0;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(245, 240, 232, 0.08);
+    }
+
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .footer-brand-tagline {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(245, 240, 232, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(245, 240, 232, 0.45);
+      max-width: 300px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(201, 169, 110, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-icon svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--gold);
+      fill: none;
+    }
+
+    .footer-contact-text {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(245, 240, 232, 0.6);
+    }
+
+    .footer-contact-text a {
+      color: rgba(245, 240, 232, 0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-text a:hover {
+      color: var(--gold);
+    }
+
+    .footer-col-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(245, 240, 232, 0.7);
+      text-decoration: none;
+      transition: color 0.2s, padding-left 0.2s;
+      display: inline-block;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      padding-left: 4px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(201, 169, 110, 0.1);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .social-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 28px;
+    }
+
+    .footer-bottom-left {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(245, 240, 232, 0.25);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-bottom-links a {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(245, 240, 232, 0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom-right {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      color: rgba(245, 240, 232, 0.2);
+    }
+
+    @media(max-width:900px) {
+      .footer-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+
+      .footer-body {
+        padding: 40px 40px 0;
+      }
+    }
+
+    @media(max-width:560px) {
+      .footer-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-body {
+        padding: 30px 20px 0;
+      }
+
+      .navbar {
+        padding: 0 20px;
+      }
+    }
+
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+      animation: slowzoom 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes slowzoom {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.06);
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10, 9, 8, 0.55) 0%, rgba(10, 9, 8, 0.25) 40%, rgba(10, 9, 8, 0.65) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeup 1.4s ease both;
+    }
+
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 8vw, 92px);
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #fff;
+      line-height: 1;
+      text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content h1 span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 10px;
+      color: rgba(245, 240, 232, 0.7);
+      margin-top: 16px;
+      text-transform: uppercase;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 28px auto;
+    }
+
+    .hero-divider span {
+      width: 60px;
+      height: 1px;
+      background: rgba(201, 169, 110, 0.5);
+      display: block;
+    }
+
+    .hero-divider i {
+      width: 7px;
+      height: 7px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+      display: block;
+    }
+
+    .careers-section {
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .careers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .career-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(201, 169, 110, 0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .career-header {
+      height: 120px;
+      background: linear-gradient(135deg, var(--gold), var(--burnt-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .career-icon {
+      font-size: 48px;
+      color: #fff;
+    }
+
+    .career-info {
+      padding: 30px;
+    }
+
+    .career-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--gold);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .career-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(245, 240, 232, 0.85);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .career-requirements {
+      margin-bottom: 20px;
+    }
+
+    .requirement-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: rgba(245, 240, 232, 0.8);
+    }
+
+    .requirement-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      color: var(--gold);
+    }
+
+    .career-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .career-btn:hover {
+      background: var(--burnt-light);
+      transform: translateY(-2px);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      background: var(--bg);
+      color: var(--gold);
+      cursor: pointer;
+      font-size: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      z-index: 99;
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-top.show {
+      display: block;
+    }
+
+    .back-to-top:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    :root {
+      --bg: #0a0a10;
+      --bg-2: #0f0f17;
+      --surface: #14141d;
+      --surface-2: #1a1a25;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-strong: rgba(255, 255, 255, 0.12);
+      --text: #ececf1;
+      --muted: #8e8e9b;
+      --muted-2: #6e6e7c;
+      --accent: #f3c14a;
+      --accent-2: #ffd770;
+      --accent-soft: rgba(243, 193, 74, 0.12);
+      --cream: #f3ead4;
+      --gold: #c9a24c;
+      --burnt: #8b6b47;
+      --burnt-light: #a67c52;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Marquee -->
   <div class="na-marquee" role="region" aria-label="National animal highlight">
     <div class="marquee">
-      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve ✦</span>
-      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve ✦</span>
-      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve ✦</span>
-      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve ✦</span>
+      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve
+        ✦</span>
+      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve
+        ✦</span>
+      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve
+        ✦</span>
+      <span>🐐 The Markhor — National Animal of Pakistan ✦ Pride of the Karakoram ✦ Explore · Protect · Preserve
+        ✦</span>
     </div>
   </div>
 
   <nav class="navbar">
 
-  <!-- LEFT -->
-  <div class="nav-left">
-    <div class="nav-links">
-      <div class="nav-item">
-        <button class="nav-btn">MORE ▾</button>
-        <div class="dropdown simple-dropdown">
-          <div class="dropdown-content-simple">
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a href="explore-more.html">Explore More</a>
-            <a href="Privacy-Policy.html">Privacy Policy</a>
+    <!-- LEFT -->
+    <div class="nav-left">
+      <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-btn">MORE ▾</button>
+          <div class="dropdown simple-dropdown">
+            <div class="dropdown-content-simple">
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact</a>
+              <a href="explore-more.html">Explore More</a>
+              <a href="Privacy-Policy.html">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- CENTER LOGO -->
-  <div class="logo-area">
-   <img src="img/logo.png" class="center-logo">
-</div>
+    <!-- CENTER LOGO -->
+    <div class="logo-area">
+      <img src="img/logo.png" class="center-logo">
+    </div>
 
-  <!-- RIGHT -->
-  <div class="nav-right">
-    <div class="nav-links">
+    <!-- RIGHT -->
+    <div class="nav-right">
+      <div class="nav-links">
+
+        <!-- ABOUT -->
+        <div class="nav-item">
+          <button class="nav-btn">ABOUT ▾</button>
+          <div class="dropdown mega-dropdown">
+            <div class="mega-img-wrap">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+                alt="Pakistan landscape">
+            </div>
+            <div class="mega-content">
+              <p class="mega-label">Our story</p>
+              <h3>Heart of Pakistan's<br>Natural Heritage</h3>
+              <p>A sanctuary dedicated to preserving majestic landscapes and wildlife.</p>
+              <a href="about.html" class="mega-cta">About US→</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="nav-item">
+          <button class="nav-btn">SERVICES ▾</button>
+          <div class="dropdown mega-dropdown">
+            <div class="mega-img-wrap">
+              <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80"
+                alt="Guided tours">
+            </div>
+            <div class="mega-content">
+              <p class="mega-label">What we offer</p>
+              <h3>Unforgettable<br>Wilderness Experiences</h3>
+              <p>Guided eco-tours and unforgettable park adventures.</p>
+              <a href="services.html" class="mega-cta">Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="nav-item">
+          <button class="nav-btn">CONTACT ▾</button>
+          <div class="dropdown mega-dropdown">
+            <div class="mega-img-wrap">
+              <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+                alt="Contact">
+            </div>
+
+            <div class="mega-content">
+              <p class="mega-label">Get in touch</p>
+              <h3>Plan Your Next Adventure</h3>
+              <p>Questions about bookings, tours, or conservation? Reach out anytime.</p>
+              <a href="contact.html" class="mega-cta">Contact us →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <button class="search-btn" onclick="performSearch()">Search ⌕</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HAMBURGER MENU BUTTON -->
+    <button class="hamburger-menu" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-content">
+      <!-- MORE -->
+      <div class="mobile-nav-item">
+        <button class="mobile-nav-btn">MORE</button>
+        <div class="mobile-dropdown">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="explore-more.html">Explore More</a>
+          <a href="Privacy-Policy.html">Privacy Policy</a>
+        </div>
+      </div>
 
       <!-- ABOUT -->
-      <div class="nav-item">
-        <button class="nav-btn">ABOUT ▾</button>
-        <div class="dropdown mega-dropdown">
-          <div class="mega-img-wrap">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
-              alt="Pakistan landscape">
-          </div>
-          <div class="mega-content">
-            <p class="mega-label">Our story</p>
-            <h3>Heart of Pakistan's<br>Natural Heritage</h3>
-            <p>A sanctuary dedicated to preserving majestic landscapes and wildlife.</p>
-            <a href="about.html" class="mega-cta">About US→</a>
-          </div>
+      <div class="mobile-nav-item">
+        <button class="mobile-nav-btn">ABOUT</button>
+        <div class="mobile-dropdown">
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="contact.html">Contact Us</a>
         </div>
       </div>
 
       <!-- SERVICES -->
-      <div class="nav-item">
-        <button class="nav-btn">SERVICES ▾</button>
-        <div class="dropdown mega-dropdown">
-          <div class="mega-img-wrap">
-            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80"
-              alt="Guided tours">
-          </div>
-          <div class="mega-content">
-            <p class="mega-label">What we offer</p>
-            <h3>Unforgettable<br>Wilderness Experiences</h3>
-            <p>Guided eco-tours and unforgettable park adventures.</p>
-            <a href="services.html" class="mega-cta">Services →</a>
-          </div>
+      <div class="mobile-nav-item">
+        <button class="mobile-nav-btn">SERVICES</button>
+        <div class="mobile-dropdown">
+          <a href="services.html">All Services</a>
+          <a href="guided-tours.html">Guided Tours</a>
+          <a href="camping-sites.html">Camping Sites</a>
         </div>
       </div>
 
       <!-- CONTACT -->
-      <div class="nav-item">
-        <button class="nav-btn">CONTACT ▾</button>
-        <div class="dropdown mega-dropdown">
-          <div class="mega-img-wrap">
-            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
-              alt="Contact">
-          </div>
-
-          <div class="mega-content">
-            <p class="mega-label">Get in touch</p>
-            <h3>Plan Your Next Adventure</h3>
-            <p>Questions about bookings, tours, or conservation? Reach out anytime.</p>
-            <a href="contact.html" class="mega-cta">Contact us →</a>
-          </div>
+      <div class="mobile-nav-item">
+        <button class="mobile-nav-btn">CONTACT</button>
+        <div class="mobile-dropdown">
+          <a href="contact.html">Contact Us</a>
+          <a href="careers.html">Careers</a>
         </div>
       </div>
 
       <!-- SEARCH -->
-      <div class="search-wrap">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button class="search-btn" onclick="performSearch()">Search ⌕</button>
+      <div class="mobile-search-wrap">
+        <input type="text" id="mobileSearchInput" placeholder="Search...">
+        <button onclick="performMobileSearch()">SEARCH</button>
       </div>
-
     </div>
   </div>
 
-  <!-- HAMBURGER MENU BUTTON -->
-  <button class="hamburger-menu" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu">
-  <div class="mobile-menu-content">
-    <!-- MORE -->
-    <div class="mobile-nav-item">
-      <button class="mobile-nav-btn">MORE</button>
-      <div class="mobile-dropdown">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="explore-more.html">Explore More</a>
-        <a href="Privacy-Policy.html">Privacy Policy</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">CAREERS</p>
+      <h1>JOIN OUR <span>MISSION</span></h1>
+      <p class="hero-subtitle">Build a career protecting Pakistan's natural heritage</p>
+      <div class="hero-divider">
+        <span></span>
+        <i></i>
+        <span></span>
       </div>
     </div>
+  </section>
 
-    <!-- ABOUT -->
-    <div class="mobile-nav-item">
-      <button class="mobile-nav-btn">ABOUT</button>
-      <div class="mobile-dropdown">
-        <a href="about.html">About Us</a>
-        <a href="services.html">Our Services</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
-    </div>
+  <!-- Careers Section -->
+  <section class="careers-section">
+    <div class="careers-grid">
 
-    <!-- SERVICES -->
-    <div class="mobile-nav-item">
-      <button class="mobile-nav-btn">SERVICES</button>
-      <div class="mobile-dropdown">
-        <a href="services.html">All Services</a>
-        <a href="guided-tours.html">Guided Tours</a>
-        <a href="camping-sites.html">Camping Sites</a>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="mobile-nav-item">
-      <button class="mobile-nav-btn">CONTACT</button>
-      <div class="mobile-dropdown">
-        <a href="contact.html">Contact Us</a>
-        <a href="careers.html">Careers</a>
-      </div>
-    </div>
-
-    <!-- SEARCH -->
-    <div class="mobile-search-wrap">
-      <input type="text" id="mobileSearchInput" placeholder="Search...">
-      <button onclick="performMobileSearch()">SEARCH</button>
-    </div>
-  </div>
-</div>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">CAREERS</p>
-    <h1>JOIN OUR <span>MISSION</span></h1>
-    <p class="hero-subtitle">Build a career protecting Pakistan's natural heritage</p>
-    <div class="hero-divider">
-      <span></span>
-      <i></i>
-      <span></span>
-    </div>
-  </div>
-</section>
-
-<!-- Careers Section -->
-<section class="careers-section">
-  <div class="careers-grid">
-    
-    <!-- Park Ranger -->
-    <div class="career-card">
-      <div class="career-header">
-        <div class="career-icon">🏔️</div>
-      </div>
-      <div class="career-info">
-        <h3 class="career-title">Park Ranger</h3>
-        <p class="career-desc">Protect wildlife and guide visitors through Pakistan's stunning mountain landscapes.</p>
-        <div class="career-requirements">
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Physical fitness certification</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Wildlife knowledge</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>First aid training</span>
-          </div>
+      <!-- Park Ranger -->
+      <div class="career-card">
+        <div class="career-header">
+          <div class="career-icon">🏔️</div>
         </div>
-        <a href="#" class="career-btn">Apply Now</a>
-      </div>
-    </div>
-
-    <!-- Wildlife Biologist -->
-    <div class="career-card">
-      <div class="career-header">
-        <div class="career-icon">🦌</div>
-      </div>
-      <div class="career-info">
-        <h3 class="career-title">Wildlife Biologist</h3>
-        <p class="career-desc">Conduct research and conservation programs for endangered species like the Markhor.</p>
-        <div class="career-requirements">
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Biology degree</span>
+        <div class="career-info">
+          <h3 class="career-title">Park Ranger</h3>
+          <p class="career-desc">Protect wildlife and guide visitors through Pakistan's stunning mountain landscapes.
+          </p>
+          <div class="career-requirements">
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Physical fitness certification</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Wildlife knowledge</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>First aid training</span>
+            </div>
           </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Research experience</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Field work skills</span>
-          </div>
+          <a href="#" class="career-btn">Apply Now</a>
         </div>
-        <a href="#" class="career-btn">Apply Now</a>
       </div>
-    </div>
 
-    <!-- Tour Guide -->
-    <div class="career-card">
-      <div class="career-header">
-        <div class="career-icon">🥾</div>
-      </div>
-      <div class="career-info">
-        <h3 class="career-title">Mountain Guide</h3>
-        <p class="career-desc">Lead trekkers and climbers through Pakistan's most challenging mountain terrain.</p>
-        <div class="career-requirements">
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Climbing certification</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>High-altitude experience</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Language skills</span>
-          </div>
+      <!-- Wildlife Biologist -->
+      <div class="career-card">
+        <div class="career-header">
+          <div class="career-icon">🦌</div>
         </div>
-        <a href="#" class="career-btn">Apply Now</a>
-      </div>
-    </div>
-
-    <!-- Conservation Officer -->
-    <div class="career-card">
-      <div class="career-header">
-        <div class="career-icon">🌿</div>
-      </div>
-      <div class="career-info">
-        <h3 class="career-title">Conservation Officer</h3>
-        <p class="career-desc">Develop and implement conservation strategies to protect fragile mountain ecosystems.</p>
-        <div class="career-requirements">
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Environmental science degree</span>
+        <div class="career-info">
+          <h3 class="career-title">Wildlife Biologist</h3>
+          <p class="career-desc">Conduct research and conservation programs for endangered species like the Markhor.</p>
+          <div class="career-requirements">
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Biology degree</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Research experience</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Field work skills</span>
+            </div>
           </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Policy knowledge</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Project management</span>
-          </div>
+          <a href="#" class="career-btn">Apply Now</a>
         </div>
-        <a href="#" class="career-btn">Apply Now</a>
       </div>
-    </div>
 
-    <!-- Research Assistant -->
-    <div class="career-card">
-      <div class="career-header">
-        <div class="career-icon">🔬</div>
-      </div>
-      <div class="career-info">
-        <h3 class="career-title">Research Assistant</h3>
-        <p class="career-desc">Support scientific research projects studying climate change and wildlife populations.</p>
-        <div class="career-requirements">
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Science background</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Data analysis skills</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Attention to detail</span>
-          </div>
+      <!-- Tour Guide -->
+      <div class="career-card">
+        <div class="career-header">
+          <div class="career-icon">🥾</div>
         </div>
-        <a href="#" class="career-btn">Apply Now</a>
-      </div>
-    </div>
-
-    <!-- Administrative Staff -->
-    <div class="career-card">
-      <div class="career-header">
-        <div class="career-icon">📋</div>
-      </div>
-      <div class="career-info">
-        <h3 class="career-title">Administrative Staff</h3>
-        <p class="career-desc">Manage park operations, visitor services, and conservation program coordination.</p>
-        <div class="career-requirements">
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Management experience</span>
+        <div class="career-info">
+          <h3 class="career-title">Mountain Guide</h3>
+          <p class="career-desc">Lead trekkers and climbers through Pakistan's most challenging mountain terrain.</p>
+          <div class="career-requirements">
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Climbing certification</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>High-altitude experience</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Language skills</span>
+            </div>
           </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Communication skills</span>
-          </div>
-          <div class="requirement-item">
-            <span class="requirement-icon">✓</span>
-            <span>Computer literacy</span>
-          </div>
+          <a href="#" class="career-btn">Apply Now</a>
         </div>
-        <a href="#" class="career-btn">Apply Now</a>
       </div>
+
+      <!-- Conservation Officer -->
+      <div class="career-card">
+        <div class="career-header">
+          <div class="career-icon">🌿</div>
+        </div>
+        <div class="career-info">
+          <h3 class="career-title">Conservation Officer</h3>
+          <p class="career-desc">Develop and implement conservation strategies to protect fragile mountain ecosystems.
+          </p>
+          <div class="career-requirements">
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Environmental science degree</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Policy knowledge</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Project management</span>
+            </div>
+          </div>
+          <a href="#" class="career-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Research Assistant -->
+      <div class="career-card">
+        <div class="career-header">
+          <div class="career-icon">🔬</div>
+        </div>
+        <div class="career-info">
+          <h3 class="career-title">Research Assistant</h3>
+          <p class="career-desc">Support scientific research projects studying climate change and wildlife populations.
+          </p>
+          <div class="career-requirements">
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Science background</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Data analysis skills</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Attention to detail</span>
+            </div>
+          </div>
+          <a href="#" class="career-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Administrative Staff -->
+      <div class="career-card">
+        <div class="career-header">
+          <div class="career-icon">📋</div>
+        </div>
+        <div class="career-info">
+          <h3 class="career-title">Administrative Staff</h3>
+          <p class="career-desc">Manage park operations, visitor services, and conservation program coordination.</p>
+          <div class="career-requirements">
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Management experience</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Communication skills</span>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon">✓</span>
+              <span>Computer literacy</span>
+            </div>
+          </div>
+          <a href="#" class="career-btn">Apply Now</a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Back to top -->
+  <button id="backTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-<!-- Back to top -->
-<button id="backTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <script>
+    // handle the search
+    function performSearch() {
+      const searchInput = document.getElementById('searchInput');
+      const searchTerm = searchInput.value.toLowerCase().trim();
 
-<script>
-  // handle the search
-  function performSearch() {
-    const searchInput = document.getElementById('searchInput');
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    
-    // Search redirects
-    if (searchTerm === 'k2 base camp' || searchTerm === 'k2') {
-      window.location.href = 'k2-base-camp.html';
-    } else if (searchTerm === 'hunza valley' || searchTerm === 'hunza') {
-      window.location.href = 'hunza-valley.html';
-    } else if (searchTerm === 'fairy meadows' || searchTerm === 'fairy') {
-      window.location.href = 'fairy-meadows.html';
-    } else if (searchTerm === 'deosai' || searchTerm === 'deosai plains') {
-      window.location.href = 'deosai.html';
-    } else {
-      // Optional: Show message for no results
-      searchInput.style.borderColor = '#FF4500';
-      setTimeout(() => {
-        searchInput.style.borderColor = '';
-      }, 2000);
+      // Search redirects
+      if (searchTerm === 'k2 base camp' || searchTerm === 'k2') {
+        window.location.href = 'k2-base-camp.html';
+      } else if (searchTerm === 'hunza valley' || searchTerm === 'hunza') {
+        window.location.href = 'hunza-valley.html';
+      } else if (searchTerm === 'fairy meadows' || searchTerm === 'fairy') {
+        window.location.href = 'fairy-meadows.html';
+      } else if (searchTerm === 'deosai' || searchTerm === 'deosai plains') {
+        window.location.href = 'deosai.html';
+      } else {
+        // Optional: Show message for no results
+        searchInput.style.borderColor = '#FF4500';
+        setTimeout(() => {
+          searchInput.style.borderColor = '';
+        }, 2000);
+      }
     }
-  }
 
-  // Event listener for Enter key
-  document.getElementById('searchInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  });
+    // Event listener for Enter key
+    document.getElementById('searchInput').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
 
-  // Back to top button
-  var btn = document.getElementById('backTop');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 400) btn.classList.add('show');
-    else btn.classList.remove('show');
-  });
-  btn.addEventListener('click', function() {
-    window.scrollTo({top:0, behavior:'smooth'});
-  });
-</script>
-<!-- FOOTER -->
+    // Back to top button
+    var btn = document.getElementById('backTop');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 400) btn.classList.add('show');
+      else btn.classList.remove('show');
+    });
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <!-- FOOTER -->
   <footer class="footer">
 
     <!-- Illustrated forest scene SVG -->
@@ -710,60 +1425,110 @@
   <style>
     /* Mobile First - Base Styles */
     @media (max-width: 480px) {
-      body { font-size: 14px; }
-      
+      body {
+        font-size: 14px;
+      }
+
       /* Navbar */
-      .navbar { 
-        padding: 0 16px; 
+      .navbar {
+        padding: 0 16px;
         height: 70px;
         flex-wrap: wrap;
       }
-      .nav-left, .nav-right { flex: 1; }
-      .logo-area { 
-        position: static; 
+
+      .nav-left,
+      .nav-right {
+        flex: 1;
+      }
+
+      .logo-area {
+        position: static;
         transform: none;
         margin: 8px auto;
       }
-      .main-logo, .center-logo { height: 40px; }
-      .nav-links { display: none; }
-      .search-wrap { 
-        width: 100%; 
+
+      .main-logo,
+      .center-logo {
+        height: 40px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .search-wrap {
+        width: 100%;
         margin: 8px 0;
         order: 3;
       }
-      .search-wrap input { width: 100%; }
-      
+
+      .search-wrap input {
+        width: 100%;
+      }
+
       /* Marquee */
-      .na-marquee { padding: 6px 0; }
-      .marquee { font-size: 12px; }
-      
+      .na-marquee {
+        padding: 6px 0;
+      }
+
+      .marquee {
+        font-size: 12px;
+      }
+
       /* Careers Section */
-      .careers-section { padding: 20px 16px; }
-      .careers-content { padding: 20px; }
-      .careers-section h1 { font-size: 24px; }
-      .careers-section h2 { font-size: 20px; }
-      .careers-section h3 { font-size: 18px; }
-      
+      .careers-section {
+        padding: 20px 16px;
+      }
+
+      .careers-content {
+        padding: 20px;
+      }
+
+      .careers-section h1 {
+        font-size: 24px;
+      }
+
+      .careers-section h2 {
+        font-size: 20px;
+      }
+
+      .careers-section h3 {
+        font-size: 18px;
+      }
+
       /* Footer */
-      .footer { padding: 40px 16px 20px; }
-      .footer-grid { 
-        grid-template-columns: 1fr; 
+      .footer {
+        padding: 40px 16px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
       }
-      .footer-contact { justify-content: center; }
-      .footer-socials { justify-content: center; }
-      .footer-links { text-align: center; }
-      .footer-bottom { 
-        flex-direction: column; 
+
+      .footer-contact {
+        justify-content: center;
+      }
+
+      .footer-socials {
+        justify-content: center;
+      }
+
+      .footer-links {
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
         text-align: center;
         gap: 10px;
       }
-      
+
       /* Back to Top */
-      .back-to-top { 
-        width: 45px; 
-        height: 45px; 
+      .back-to-top {
+        width: 45px;
+        height: 45px;
         right: 16px;
         bottom: 16px;
       }
@@ -771,57 +1536,106 @@
 
     /* Small Tablets */
     @media (min-width: 481px) and (max-width: 768px) {
-      .navbar { padding: 0 24px; }
-      .nav-links { 
-        display: flex; 
+      .navbar {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        display: flex;
         gap: 15px;
         font-size: 11px;
       }
-      .nav-btn { padding: 6px 0; }
-      
-      .careers-content { padding: 30px; }
-      
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .nav-btn {
+        padding: 6px 0;
+      }
+
+      .careers-content {
+        padding: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     /* Tablets */
     @media (min-width: 769px) and (max-width: 1024px) {
-      .navbar { padding: 0 32px; }
-      .nav-links { gap: 20px; }
-      
-      .careers-content { padding: 40px; }
-      
-      .footer-grid { grid-template-columns: repeat(3, 1fr); }
+      .navbar {
+        padding: 0 32px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      .careers-content {
+        padding: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     /* Large Tablets & Small Laptops */
     @media (min-width: 1025px) and (max-width: 1366px) {
-      .careers-section { max-width: 1200px; margin: 0 auto; }
-      .careers-content { padding: 50px; }
+      .careers-section {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .careers-content {
+        padding: 50px;
+      }
     }
 
     /* Desktop */
     @media (min-width: 1367px) and (max-width: 1920px) {
-      .careers-section { max-width: 1400px; margin: 0 auto; }
-      .careers-content { padding: 60px; }
+      .careers-section {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .careers-content {
+        padding: 60px;
+      }
     }
 
     /* Large Desktop */
     @media (min-width: 1921px) {
-      .careers-section { max-width: 1600px; margin: 0 auto; }
-      .careers-content { padding: 70px; }
+      .careers-section {
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+
+      .careers-content {
+        padding: 70px;
+      }
     }
 
     /* Landscape Mobile */
     @media (max-width: 896px) and (orientation: landscape) {
-      .navbar { height: 60px; }
-      .main-logo, .center-logo { height: 35px; }
-      .careers-content { padding: 15px; }
+      .navbar {
+        height: 60px;
+      }
+
+      .main-logo,
+      .center-logo {
+        height: 35px;
+      }
+
+      .careers-content {
+        padding: 15px;
+      }
     }
 
     /* High DPI/Retina Displays */
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      .main-logo, .center-logo { 
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+
+      .main-logo,
+      .center-logo {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
       }
@@ -829,14 +1643,17 @@
 
     /* Touch Devices */
     @media (hover: none) and (pointer: coarse) {
-      .nav-btn, .footer-links a {
+
+      .nav-btn,
+      .footer-links a {
         padding: 12px 16px;
         min-height: 44px;
         min-width: 44px;
       }
-      .back-to-top { 
-        width: 50px; 
-        height: 50px; 
+
+      .back-to-top {
+        width: 50px;
+        height: 50px;
       }
     }
 
@@ -850,7 +1667,8 @@
     }
   </style>
 
-  <link rel="stylesheet" href="smooth.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="css/smooth.css">
+  <script src="js/script.js"></script>
 </body>
+
 </html>
