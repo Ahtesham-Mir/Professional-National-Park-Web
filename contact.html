@@ -9,6 +9,187 @@
 </head>
 <body>
 
+  <div class="na-marquee" role="region" aria-label="National animal highlight">
+    <div class="na-marquee-track">
+
+      <!-- set 1 -->
+      <span class="na-marquee-item">🐐 The Markhor — National Animal of Pakistan</span>
+      <span class="na-marquee-dot">✦</span>
+      <span class="na-marquee-item">Pride of the Karakoram, Hindu Kush &amp; Himalayas</span>
+      <span class="na-marquee-dot">✦</span>
+      <span class="na-marquee-item">Symbol of Resilience, Freedom &amp; Heritage</span>
+      <span class="na-marquee-dot">✦</span>
+
+      <!-- set 2 (duplicate for smooth loop) -->
+      <span class="na-marquee-item">🐐 The Markhor — National Animal of Pakistan</span>
+      <span class="na-marquee-dot">✦</span>
+      <span class="na-marquee-item">Pride of the Karakoram, Hindu Kush &amp; Himalayas</span>
+      <span class="na-marquee-dot">✦</span>
+      <span class="na-marquee-item">Symbol of Resilience, Freedom &amp; Heritage</span>
+
+    </div>
+  </div>
+
+  <nav class="navbar">
+
+  <!-- LEFT -->
+  <div class="nav-left">
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-btn">MORE ▾</button>
+        <div class="dropdown simple-dropdown">
+          <div class="dropdown-content-simple">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="explore-more.html">Explore More</a>
+            <a href="Privacy-Policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER LOGO -->
+  <div class="logo-area">
+    <!-- PATH FIXED -->
+    <a href="index.html" class="logo-link">
+      <img src="img/logo.png" alt="Logo" class="center-logo">
+    </a>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+    <div class="nav-links">
+
+      <!-- ABOUT -->
+      <div class="nav-item">
+        <button class="nav-btn">ABOUT ▾</button>
+        <div class="dropdown mega-dropdown">
+          <div class="mega-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+              alt="Pakistan landscape">
+          </div>
+          <div class="mega-content">
+            <p class="mega-label">Our story</p>
+            <h3>Heart of Pakistan's<br>Natural Heritage</h3>
+            <p>A sanctuary dedicated to preserving majestic landscapes and wildlife.</p>
+            <a href="about.html" class="mega-cta">About US→</a>
+          </div>
+        </div>  
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <button class="nav-btn">SERVICES ▾</button>
+        <div class="dropdown mega-dropdown">
+          <div class="mega-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80"
+              alt="Guided tours">
+          </div>
+          <div class="mega-content">
+            <p class="mega-label">What we offer</p>
+            <h3>Unforgettable<br>Wilderness Experiences</h3>
+            <p>Guided eco-tours and unforgettable park adventures.</p>
+            <a href="services.html" class="mega-cta">Services →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="nav-item">
+        <button class="nav-btn">CONTACT ▾</button>
+        <div class="dropdown mega-dropdown">
+          <div class="mega-img-wrap">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+              alt="Contact">
+          </div>
+
+          <div class="mega-content">
+            <p class="mega-label">Get in touch</p>
+            <h3>Plan Your Next Adventure</h3>
+            <p>Questions about bookings, tours, or conservation? Reach out anytime.</p>
+
+            <!-- BUTTON FIXED (same theme) -->
+            <a href="contact.html" class="mega-cta">Contact Us →</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-wrap">
+        <input id="searchInput" type="text" placeholder="Search...">
+        <button class="search-btn"
+          onclick="document.getElementById('searchInput').classList.toggle('open')">
+          Search ⌕
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HAMBURGER MENU BUTTON -->
+  <button class="hamburger-menu" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- MORE -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">MORE</button>
+      <div class="mobile-dropdown">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="explore-more.html">Explore More</a>
+        <a href="Privacy-Policy.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">ABOUT</button>
+      <div class="mobile-dropdown">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">SERVICES</button>
+      <div class="mobile-dropdown">
+        <a href="services.html">All Services</a>
+        <a href="guided-tours.html">Guided Tours</a>
+        <a href="camping-sites.html">Camping Sites</a>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">CONTACT</button>
+      <div class="mobile-dropdown">
+        <a href="contact.html">Contact Us</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="mobile-search-wrap">
+      <input type="text" id="mobileSearchInput" placeholder="Search...">
+      <button onclick="performMobileSearch()">SEARCH</button>
+    </div>
+  </div>
+</div>
+
   <!-- HERO -->
   <section class="contact-hero">
     <div class="container">
