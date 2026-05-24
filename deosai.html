@@ -405,9 +405,10 @@
 </head>
 
 <body>
-  <!-- Marquee -->
+
   <div class="na-marquee" role="region" aria-label="National animal highlight">
     <div class="na-marquee-track">
+
       <!-- set 1 -->
       <span class="na-marquee-item">🐐 The Markhor — National Animal of Pakistan</span>
       <span class="na-marquee-dot">✦</span>
@@ -422,14 +423,169 @@
       <span class="na-marquee-item">Pride of the Karakoram, Hindu Kush &amp; Himalayas</span>
       <span class="na-marquee-dot">✦</span>
       <span class="na-marquee-item">Symbol of Resilience, Freedom &amp; Heritage</span>
+
     </div>
   </div>
 
-  <!-- Search Bar -->
-  <div class="search-container">
-    <input id="searchInput" type="text" placeholder="Search destinations..." onkeypress="handleSearch(event)">
-    <button class="search-btn" onclick="toggleSearch()">Search ⌕</button>
+  <nav class="navbar">
+
+  <!-- LEFT -->
+  <div class="nav-left">
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-btn">MORE ▾</button>
+        <div class="dropdown simple-dropdown">
+          <div class="dropdown-content-simple">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="explore-more.html">Explore More</a>
+            <a href="Privacy-Policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- CENTER LOGO -->
+  <div class="logo-area">
+    <!-- PATH FIXED -->
+    <a href="index.html" class="logo-link">
+      <img src="img/logo.png" alt="Logo" class="center-logo">
+    </a>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+    <div class="nav-links">
+
+      <!-- ABOUT -->
+      <div class="nav-item">
+        <button class="nav-btn">ABOUT ▾</button>
+        <div class="dropdown mega-dropdown">
+          <div class="mega-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+              alt="Pakistan landscape">
+          </div>
+          <div class="mega-content">
+            <p class="mega-label">Our story</p>
+            <h3>Heart of Pakistan's<br>Natural Heritage</h3>
+            <p>A sanctuary dedicated to preserving majestic landscapes and wildlife.</p>
+            <a href="about.html" class="mega-cta">About US→</a>
+          </div>
+        </div>  
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <button class="nav-btn">SERVICES ▾</button>
+        <div class="dropdown mega-dropdown">
+          <div class="mega-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80"
+              alt="Guided tours">
+          </div>
+          <div class="mega-content">
+            <p class="mega-label">What we offer</p>
+            <h3>Unforgettable<br>Wilderness Experiences</h3>
+            <p>Guided eco-tours and unforgettable park adventures.</p>
+            <a href="services.html" class="mega-cta">Services →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="nav-item">
+        <button class="nav-btn">CONTACT ▾</button>
+        <div class="dropdown mega-dropdown">
+          <div class="mega-img-wrap">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+              alt="Contact">
+          </div>
+
+          <div class="mega-content">
+            <p class="mega-label">Get in touch</p>
+            <h3>Plan Your Next Adventure</h3>
+            <p>Questions about bookings, tours, or conservation? Reach out anytime.</p>
+
+            <!-- BUTTON FIXED (same theme) -->
+            <a href="contact.html" class="mega-cta">Contact Us →</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-wrap">
+        <input id="searchInput" type="text" placeholder="Search...">
+        <button class="search-btn"
+          onclick="document.getElementById('searchInput').classList.toggle('open')">
+          Search ⌕
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HAMBURGER MENU BUTTON -->
+  <button class="hamburger-menu" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- MORE -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">MORE</button>
+      <div class="mobile-dropdown">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="explore-more.html">Explore More</a>
+        <a href="Privacy-Policy.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">ABOUT</button>
+      <div class="mobile-dropdown">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">SERVICES</button>
+      <div class="mobile-dropdown">
+        <a href="services.html">All Services</a>
+        <a href="guided-tours.html">Guided Tours</a>
+        <a href="camping-sites.html">Camping Sites</a>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-btn">CONTACT</button>
+      <div class="mobile-dropdown">
+        <a href="contact.html">Contact Us</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="mobile-search-wrap">
+      <input type="text" id="mobileSearchInput" placeholder="Search...">
+      <button onclick="performMobileSearch()">SEARCH</button>
+    </div>
+  </div>
+</div>
 
   <!-- Hero Section -->
   <div class="hero-section">
@@ -506,6 +662,217 @@
     }
 
       </script>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <!-- Illustrated forest scene SVG -->
+    <svg class="footer-scene" viewBox="0 0 1440 280" xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMax slice">
+      <!-- Sky gradient -->
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d4e8c2" />
+          <stop offset="100%" stop-color="#8fba7a" />
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="280" fill="url(#skyGrad)" />
+
+      <!-- Distant mountains -->
+      <polygon
+        points="0,180 120,60 240,140 360,40 480,130 600,20 720,110 840,30 960,120 1080,50 1200,140 1320,70 1440,160 1440,280 0,280"
+        fill="#6a9e5e" opacity="0.5" />
+      <polygon
+        points="0,200 100,100 200,160 320,80 440,150 560,60 680,140 800,70 920,150 1040,90 1160,160 1280,100 1440,180 1440,280 0,280"
+        fill="#4f7a44" opacity="0.7" />
+
+      <!-- Mid trees -->
+      <g fill="#2d5426">
+        <!-- left cluster -->
+        <polygon points="30,280 60,160 90,280" />
+        <polygon points="55,280 90,140 125,280" />
+        <polygon points="80,280 118,155 156,280" />
+        <polygon points="130,280 165,120 200,280" />
+        <polygon points="160,280 200,145 240,280" />
+        <polygon points="200,280 240,110 280,280" />
+        <!-- right cluster -->
+        <polygon points="1200,280 1235,130 1270,280" />
+        <polygon points="1240,280 1278,145 1316,280" />
+        <polygon points="1280,280 1318,120 1356,280" />
+        <polygon points="1320,280 1355,140 1390,280" />
+        <polygon points="1360,280 1395,155 1430,280" />
+        <polygon points="1390,280 1420,130 1450,280" />
+      </g>
+
+      <!-- Watch tower -->
+      <g fill="#1e3d1a">
+        <!-- legs -->
+        <rect x="696" y="140" width="4" height="110" />
+        <rect x="740" y="140" width="4" height="110" />
+        <rect x="694" y="140" width="55" height="3" />
+        <rect x="696" y="180" width="48" height="3" />
+        <!-- diagonal braces -->
+        <line x1="700" y1="140" x2="744" y2="250" stroke="#1e3d1a" stroke-width="2" />
+        <line x1="744" y1="140" x2="700" y2="250" stroke="#1e3d1a" stroke-width="2" />
+        <!-- cabin -->
+        <rect x="688" y="108" width="64" height="36" />
+        <!-- roof -->
+        <polygon points="684,110 720,88 756,110" fill="#162e12" />
+        <!-- window -->
+        <rect x="706" y="116" width="12" height="14" fill="#3a6e30" opacity="0.7" />
+        <rect x="722" y="116" width="12" height="14" fill="#3a6e30" opacity="0.7" />
+      </g>
+
+      <!-- Cable lines from tower -->
+      <line x1="720" y1="108" x2="400" y2="220" stroke="#1e3d1a" stroke-width="1.2" opacity="0.5" />
+      <line x1="720" y1="108" x2="1050" y2="210" stroke="#1e3d1a" stroke-width="1.2" opacity="0.5" />
+
+      <!-- Birds -->
+      <g fill="none" stroke="#1e3d1a" stroke-width="1.2">
+        <path d="M820,75 Q824,71 828,75" />
+        <path d="M834,68 Q838,64 842,68" />
+        <path d="M845,78 Q849,74 853,78" />
+      </g>
+
+      <!-- Foreground dark trees -->
+      <g fill="#0f2410">
+        <polygon points="-10,280 30,175 70,280" />
+        <polygon points="20,280 65,150 110,280" />
+        <polygon points="60,280 108,160 156,280" />
+        <polygon points="100,280 152,130 204,280" />
+        <polygon points="145,280 200,145 255,280" />
+        <polygon points="1185,280 1238,145 1291,280" />
+        <polygon points="1230,280 1283,130 1336,280" />
+        <polygon points="1275,280 1325,160 1375,280" />
+        <polygon points="1320,280 1370,148 1420,280" />
+        <polygon points="1380,280 1418,170 1456,280" />
+      </g>
+
+      <!-- Dark ground -->
+      <rect x="0" y="250" width="1440" height="30" fill="#0a0e0c" />
+    </svg>
+
+    <div class="footer-body">
+      <div class="footer-columns">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="footer-brand-name">National Park</div>
+          <div class="footer-brand-tagline">Pakistan · Est. 2024</div>
+          <p class="footer-brand-desc">A sanctuary dedicated to preserving the wild landscapes and rich biodiversity of
+            Pakistan — from the Karakoram peaks to the mangroves of Sindh.</p>
+
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div class="footer-contact-text">Karachi, Federal B Area, Pakistan</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 13.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17.92z" />
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <a href="tel:+92315482 9170">+92 3313503195</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <a href="mailto:ahteshammir786@gmail.com">ahteshammir786@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="footer-socials">
+            <a class="social-btn" href="https://www.instagram.com/ahtesham_mir_____/" title="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 2H8C4.69 2 2 4.69 2 8v8c0 3.31 2.69 6 6 6h8c3.31 0 6-2.69 6-6V8c0-3.31-2.69-6-6-6zm4 14c0 2.21-1.79 4-4 4H8c-2.21 0-4-1.79-4-4V8c0-2.21 1.79-4 4-4h8c2.21 0 4 1.79 4 4v8zm-8-9a5 5 0 100 10A5 5 0 0012 7zm0 8a3 3 0 110-6 3 3 0 010 6zm5.5-9a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
+              </svg>
+            </a>
+            <a class="social-btn" href="https://www.facebook.com/Ahteshammir123" title="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a class="social-btn" href="#" title="Twitter / X">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a class="social-btn" href="https://www.youtube.com/@T2FSHAAM" title="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links col 1 -->
+        <div>
+          <div class="footer-col-title">Links</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About the Park</a></li>
+            <li><a href="services.html">Conservation</a></li>
+            <li><a href="wildlife-guide.html">Wildlife Guide</a></li>
+            <li><a href="park-map.html">Park Map</a></li>
+            <li><a href="news-updates.html">News & Updates</a></li>
+            <li><a href="research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <!-- Links col 2 -->
+        <div>
+          <div class="footer-col-title">Links</div>
+          <ul class="footer-links">
+            <li><a href="trekking-permits.html">Trekking Permits</a></li>
+            <li><a href="guided-tours.html">Guided Tours</a></li>
+            <li><a href="camping-sites.html">Camping Sites</a></li>
+            <li><a href="photography-tours.html">Photography Tours</a></li>
+            <li><a href="group-bookings.html">Group Bookings</a></li>
+            <li><a href="school-trips.html">School Trips</a></li>
+          </ul>
+        </div>
+
+        <!-- Links col 3 -->
+        <div>
+          <div class="footer-col-title">Links</div>
+          <ul class="footer-links">
+            <li><a href="eula.html">EULA</a></li>
+            <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="contact.html">Support Forum</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">© 2024 National Park Pakistan. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="eula.html">EULA</a>
+          <a href="Privacy-Policy.html">Privacy Policy</a>
+          <a href="terms-conditions.html">Terms & Conditions</a>
+        </div>
+        <div class="footer-bottom-right">Designed & developed for National Park PK</div>
+      </div>
+    </div>
+  </footer>
+
   <link rel="stylesheet" href="css/smooth.css">
   <script src="js/script.js"></script>
 </body>
