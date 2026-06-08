@@ -31,8 +31,11 @@
       overflow: hidden;
       z-index: 1001;
       height: 40px;
+<<<<<<< HEAD
       padding: 0;
       line-height: 1;
+=======
+>>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
     }
 
     .na-marquee-track {

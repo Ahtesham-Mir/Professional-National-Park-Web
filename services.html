@@ -51,9 +51,13 @@
     <!-- CENTER LOGO -->
     <div class="logo-area">
       <!-- PATH FIXED -->
+<<<<<<< HEAD
       <a href="index.html" class="logo-link">
         <img src="img/logo.png" alt="Logo" class="center-logo">
       </a>
+=======
+      <img src="img/logo.png" alt="Logo" class="center-logo">
+>>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
     </div>
 
     <!-- RIGHT -->
@@ -126,16 +130,25 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <!-- HAMBURGER MENU BUTTON -->
     <button class="hamburger-menu" aria-label="Toggle menu">
       <span></span>
       <span></span>
       <span></span>
+=======
+    <!-- HAMBURGER MENU -->
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+>>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
     </button>
 
   </nav>
 
   <!-- MOBILE MENU -->
+<<<<<<< HEAD
   <div class="mobile-menu">
     <div class="mobile-menu-content">
       <!-- MORE -->
@@ -184,6 +197,17 @@
         <input type="text" id="mobileSearchInput" placeholder="Search...">
         <button onclick="performMobileSearch()">SEARCH</button>
       </div>
+=======
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+      <nav class="mobile-nav">
+        <a href="services.html" class="mobile-nav-link">Back</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="Privacy-Policy.html" class="mobile-nav-link">Privacy Policy</a>
+      </nav>
+>>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
     </div>
   </div>
 
@@ -449,7 +473,45 @@
   <button id="backTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
+<<<<<<< HEAD
     // Back to top
+=======
+    // Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      hamburgerBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+>>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
     var btn = document.getElementById('backTop');
     window.addEventListener('scroll', function () {
       if (window.scrollY > 400) btn.classList.add('show');
