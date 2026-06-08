@@ -1,0 +1,229 @@
+/**
+ * Small tweaks and smooth transitions - theme and layout stay the same.
+ * Loads at the end so it goes over other styles.
+ */
+
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 0.28s;
+  --t-med: 0.45s;
+  --t-slow: 0.75s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    animation: smoothPageIn 0.55s var(--ease-smooth) both;
+  }
+
+  @keyframes smoothPageIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/* navbar and marquee transitions */
+.navbar {
+  transition:
+    background-color var(--t-med) var(--ease-smooth),
+    border-color var(--t-med) var(--ease-smooth),
+    box-shadow var(--t-med) var(--ease-smooth);
+}
+
+.na-marquee,
+.na-marquee-track {
+  transition: opacity var(--t-med) var(--ease-smooth);
+}
+
+/* interactive elements get smooth transitions */
+a:not(.no-smooth) {
+  transition:
+    color var(--t-fast) var(--ease-smooth),
+    opacity var(--t-fast) var(--ease-smooth),
+    border-color var(--t-fast) var(--ease-smooth),
+    background-color var(--t-fast) var(--ease-smooth),
+    padding-left var(--t-fast) var(--ease-smooth),
+    transform var(--t-med) var(--ease-out-expo);
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.nav-btn,
+.search-btn,
+.btn-primary,
+.mega-cta,
+.camping-btn,
+.social-btn,
+.mobile-nav-btn,
+[class*="-btn"]:not(.no-smooth) {
+  transition:
+    color var(--t-fast) var(--ease-smooth),
+    background-color var(--t-fast) var(--ease-smooth),
+    border-color var(--t-fast) var(--ease-smooth),
+    transform var(--t-med) var(--ease-out-expo),
+    box-shadow var(--t-med) var(--ease-smooth),
+    opacity var(--t-fast) var(--ease-smooth);
+}
+
+button:active,
+.btn-primary:active,
+.camping-btn:active {
+  transform: translateY(1px);
+}
+
+/* form fields smooth transitions */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  transition:
+    border-color var(--t-fast) var(--ease-smooth),
+    background-color var(--t-fast) var(--ease-smooth),
+    box-shadow var(--t-fast) var(--ease-smooth),
+    opacity var(--t-fast) var(--ease-smooth);
+}
+
+input:focus:not([type="checkbox"]):not([type="radio"]),
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.18);
+}
+
+/* card and panel hover effects */
+.dest-card,
+.wildlife-card,
+.camping-card,
+.exp-img-wrap,
+[class*="-card"]:not(.no-smooth) {
+  transition:
+    transform var(--t-med) var(--ease-out-expo),
+    box-shadow var(--t-med) var(--ease-smooth),
+    border-color var(--t-med) var(--ease-smooth);
+}
+
+/* image scaling and filter changes */
+.dest-card img,
+.wildlife-card img,
+.camping-img img,
+.mega-img-wrap img,
+.exp-img-wrap img,
+.hero-bg,
+.wildlife-main img,
+[class*="-img"] img:not(.center-logo):not(.main-logo):not(.no-smooth) {
+  transition:
+    transform var(--t-slow) var(--ease-out-expo),
+    filter var(--t-med) var(--ease-smooth),
+    opacity var(--t-med) var(--ease-smooth);
+}
+
+.center-logo,
+.main-logo,
+.navbar .logo-area img,
+.footer-scene {
+  transition: opacity var(--t-fast) var(--ease-smooth);
+}
+
+/* dropdown and mobile menu animations */
+.dropdown,
+.mega-dropdown,
+.simple-dropdown,
+.mobile-menu,
+.mobile-dropdown {
+  transition-timing-function: var(--ease-out-expo) !important;
+}
+
+.mobile-menu {
+  transition:
+    max-height var(--t-med) var(--ease-out-expo),
+    opacity var(--t-fast) var(--ease-smooth) !important;
+}
+
+.mobile-dropdown {
+  transition:
+    max-height var(--t-med) var(--ease-out-expo),
+    opacity var(--t-fast) var(--ease-smooth) !important;
+}
+
+/* footer links and back-to-top button */
+.footer-links a,
+.footer-contact-text a,
+.footer-bottom-links a,
+.bottom-links a {
+  transition:
+    color var(--t-fast) var(--ease-smooth),
+    padding-left var(--t-fast) var(--ease-smooth),
+    opacity var(--t-fast) var(--ease-smooth);
+}
+
+.back-to-top {
+  transition:
+    opacity var(--t-med) var(--ease-smooth),
+    visibility var(--t-med) var(--ease-smooth),
+    transform var(--t-med) var(--ease-out-expo),
+    background var(--t-fast) var(--ease-smooth),
+    color var(--t-fast) var(--ease-smooth),
+    box-shadow var(--t-med) var(--ease-smooth) !important;
+}
+
+/* fade in animation when page loads */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity var(--t-slow) var(--ease-out-expo),
+      transform var(--t-slow) var(--ease-out-expo);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity var(--t-med) var(--ease-out-expo),
+      transform var(--t-med) var(--ease-out-expo);
+  }
+
+  .reveal-stagger.is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* small lift on button hover */
+@media (prefers-reduced-motion: no-preference) {
+  .btn-primary:hover,
+  .camping-btn:hover,
+  .mega-cta:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body {
+    animation: none !important;
+  }
+}
