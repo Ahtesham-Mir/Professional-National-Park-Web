@@ -165,11 +165,7 @@ document.querySelectorAll('.navbar a').forEach(a => {
   });
 });
 
-<<<<<<< HEAD
 // toggle the mobile menu — enhanced with accessibility
-=======
-// toggle the mobile menu
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
 (function () {
   const hamburger = document.querySelector('.hamburger-menu');
   const mobileMenu = document.querySelector('.mobile-menu');
@@ -177,7 +173,6 @@ document.querySelectorAll('.navbar a').forEach(a => {
 
   if (!hamburger || !mobileMenu) return;
 
-<<<<<<< HEAD
   // Accessibility setup
   hamburger.setAttribute('role', 'button');
   hamburger.setAttribute('aria-expanded', 'false');
@@ -187,8 +182,6 @@ document.querySelectorAll('.navbar a').forEach(a => {
   mobileMenu.setAttribute('role', 'navigation');
   mobileMenu.setAttribute('aria-label', 'Mobile navigation');
 
-=======
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
   function closeAllDropdowns() {
     mobileNavBtns.forEach(function (btn) {
       btn.classList.remove('active');
@@ -200,7 +193,6 @@ document.querySelectorAll('.navbar a').forEach(a => {
     });
   }
 
-<<<<<<< HEAD
   function openMobileMenu() {
     hamburger.classList.add('active');
     mobileMenu.classList.add('active');
@@ -212,15 +204,12 @@ document.querySelectorAll('.navbar a').forEach(a => {
     if (firstBtn) firstBtn.focus();
   }
 
-=======
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
   function closeMobileMenu() {
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
     closeAllDropdowns();
-<<<<<<< HEAD
     // Return focus to hamburger
     hamburger.focus();
   }
@@ -252,39 +241,12 @@ document.querySelectorAll('.navbar a').forEach(a => {
   });
 
   // Dropdown toggle buttons
-=======
-  }
-
-  hamburger.setAttribute('aria-expanded', 'false');
-  hamburger.setAttribute('aria-controls', 'mobileMenuPanel');
-  mobileMenu.id = mobileMenu.id || 'mobileMenuPanel';
-
-  hamburger.addEventListener('click', function (e) {
-    e.stopPropagation();
-    const willOpen = !mobileMenu.classList.contains('active');
-    hamburger.classList.toggle('active', willOpen);
-    mobileMenu.classList.toggle('active', willOpen);
-    hamburger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-    document.body.style.overflow = willOpen ? 'hidden' : '';
-    if (willOpen) {
-      closeAllDropdowns();
-    } else {
-      closeAllDropdowns();
-    }
-  });
-
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
   mobileNavBtns.forEach(function (btn) {
     btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
-<<<<<<< HEAD
       var dropdown = btn.nextElementSibling;
       var isOpen = btn.classList.contains('active');
-=======
-      const dropdown = btn.nextElementSibling;
-      const isOpen = btn.classList.contains('active');
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
 
       closeAllDropdowns();
 
@@ -298,27 +260,20 @@ document.querySelectorAll('.navbar a').forEach(a => {
     });
   });
 
-<<<<<<< HEAD
   // Close menu when clicking a link
-=======
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
   document.querySelectorAll('.mobile-dropdown a').forEach(function (link) {
     link.addEventListener('click', function () {
       closeMobileMenu();
     });
   });
 
-<<<<<<< HEAD
   // Close menu when clicking outside
-=======
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
   document.addEventListener('click', function (e) {
     if (!mobileMenu.classList.contains('active')) return;
     if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
       closeMobileMenu();
     }
   });
-<<<<<<< HEAD
 
   // Close menu on Escape key from anywhere
   document.addEventListener('keydown', function (e) {
@@ -337,8 +292,6 @@ document.querySelectorAll('.navbar a').forEach(a => {
       }
     }, 150);
   });
-=======
->>>>>>> eaa8f850987aa63cb993cd6079d0e14db542f3e2
 })();
 
 // search for stuff on the page
